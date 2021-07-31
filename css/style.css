@@ -156,6 +156,9 @@ h6 {
   /* display: inline-block; */
   margin: 30px 30px;
 }
+.section1__resume{
+font-size: 20px;
+}
 .section1__img{
   margin: 30px 30px;
   width: 250px;
@@ -176,6 +179,14 @@ display: inline-block;
 }
 .li-item{
   margin-bottom: 10px;
+}
+.li-item:hover{
+  text-shadow: rgb(22, 2, 201) 0.5px 0 1px;
+}
+li::before{
+  content: "▣";
+  color: #D7524A;
+  padding-right: 10px;
 }
 .ul-items{
   display: inline-flexbox;
