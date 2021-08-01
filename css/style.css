@@ -313,28 +313,37 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
-.section3__button{
-width: 180px;
-height: 50px;
+a.section3__button{
+display: inline-block;
 background: #FFFFFF;
 border: 2px solid #D7524A;
 box-sizing: border-box;
 border-radius: 15px;
+text-decoration: none;
+padding: 10px 35px;
+margin: 30px 0 55px 25px;
+outline: none;
+vertical-align: middle;
+text-align: center;
+box-shadow: 0 0 0 60px rgba(0,0,0,0) inset, .1em .1em .2em #800;
 }
-.section3__button:hover{
-width: 180px;
-height: 50px;
+a.section3__button:hover{
 background: #d7524a;
 box-sizing: border-box;
 border-radius: 15px;
+color: #fff;
 }
-.section3__button{
-    margin: 30px 0 55px 25px;
+a.section3__button:active {
+  top: .1em;
+  left: .1em;
+  box-shadow: 0 0 0 60px rgba(0,0,0,.05) inset;
 }
-
-/* .section3__img{
-  justify-content: center;
-} */
+.section3__btn-name{
+font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 11px;
+}
 
 .column-white{
   background: #ffffff;
