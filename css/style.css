@@ -1,3 +1,11 @@
+:root{
+   --animation-transition: all 0.3s ease-in-out;
+   --vertical-scroll: 20px;
+  --mobile: calc(300px + var(--vertical-scroll));
+  --tablet: calc(640px + var(--vertical-scroll));
+  --desktop: calc(900px + var(--vertical-scroll));
+  --desktop-lg: calc(1270px + var(--vertical-scroll));
+}
 * {
   padding: 0;
   margin: 0;
@@ -82,6 +90,9 @@ h6 {
   font-size: 20px;
   color: red;
 }
+body {
+  font-family: Montserrat, sans-serif;
+}
 .wrapper {
 	min-height: 100%;
 	overflow: hidden;
@@ -91,7 +102,6 @@ h6 {
 
 .header {
   background: rgba(172, 169, 169, 0.35);
-  /* opacity: 0.7; */
 background-image: url(/img/IMG_20210730_072333.jpg);
 position: relative;
 background-attachment: fixed;
@@ -111,30 +121,26 @@ border: 0;
 overflow: hidden;
 }
 .container {
-  margin-bottom: 50px;
-  margin-top: 50px;
-  /* flex: 1 1 auto; */
   display: block;
   width: 100%;
   height: 100%;
   position: relative;
-  /* margin: auto; */
+  /* width: 1290px; */
+  margin: 0 auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 /*****************HEADER***********************/
 .header__line {
   height: 485px;
-  /* display: flex;
-  flex-direction: row; */
-  /* justify-content: center; */
+  flex-direction: row;
 }
 .header__left {
-  display:flex
+  display: flex;
   flex-direction: column;
 }
 .header__title {
   width: 45%;
-  /* height: 191px; */
-  font-family: Montserrat;
   font-style: normal;
   font-weight: 900;
   font-size: 45px;
@@ -148,15 +154,12 @@ overflow: hidden;
   text-shadow: rgb(22, 2, 201) 1px 0 10px;
 }
 .header__subtitle {
-  /* position: absolute; */
   width: 75%;
-  /*height: 136px; */
-  font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 150%;
-  color: #222222
+  color: #222222;
   margin-bottom: 50px;
   margin-left: 50px;
   display: inline-block;
@@ -168,13 +171,11 @@ overflow: hidden;
 
 }
 .section1__note {
-  font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 150%;
   color: #002935;
-  /* display: inline-block; */
   margin: 30px 30px;
 }
 .section1__resume{
@@ -187,6 +188,7 @@ margin-right: 20px;
 }
 .section1{
   background: #ddd;
+  width: 100%;
 }
 .section1__column{
   width: auto;
@@ -226,7 +228,6 @@ li::before{
 
 .section-title {
 display: inline-block;
-font-family: Montserrat;
 font-style: normal;
 font-weight: bold;
 font-size: 30px;
@@ -234,7 +235,6 @@ line-height: 37px;
 text-transform: uppercase;
 color: #002935;
 margin-bottom: 60px;
-/* padding: 0 0 6px 10px; */
 border-left: 10px solid #d7524a;
 border-bottom: 2px solid #d7524a;
 }
@@ -245,7 +245,6 @@ border-bottom: 2px solid #d7524a;
 /*****************SECTION2***********************/
 
 .section2__description{
-font-family: Montserrat;
 font-style: normal;
 font-weight: normal;
 font-size: 18px;
@@ -253,7 +252,6 @@ line-height: 155.69%;
 color: #222222;
 }
 .section2__item-title{
-font-family: Montserrat;
 font-style: normal;
 font-weight: bold;
 font-size: 22px;
@@ -272,7 +270,6 @@ margin: 15px 0 15px 0;
 }
 .section2__adv{
     display: flex;
-    /* flex-direction: row; */
     justify-content:space-evenly;
     align-items: center;
     flex-wrap: wrap;
@@ -303,7 +300,6 @@ flex-direction: column;
     box-shadow: 2px 2px 50px 1px rgba(215, 82, 74, 0.5);
 }
 .section3__card-description{
-font-family: Montserrat;
 font-style: normal;
 font-weight: normal;
 font-size: 13px;
@@ -342,7 +338,6 @@ a.section3__button:active {
   box-shadow: 0 0 0 60px rgba(0,0,0,.05) inset;
 }
 .section3__btn-name{
-font-family: Montserrat;
 font-style: normal;
 font-weight: 600;
 font-size: 11px;
@@ -392,4 +387,41 @@ font-size: 11px;
 }
 .card-descr-title{
   font-weight: 600;
+}
+
+/* **********RESPONSIVE*************** */
+
+/*1200px - 1400px*/
+@media screen and (max-width: 1400px) {
+  .container{
+    width: 1140px;
+}
+
+/*992px - 1200px*/
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 960px;
+  }
+}
+
+/* 768px - 992px */
+@media screen and (max-width: 992px) {
+  .container {
+    width: 720px;
+  }
+}
+
+/* 576px - 768px */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 540px;
+  }
+}
+
+/* 320px - 576px */
+@media screen and (max-width: 576px) {
+  .container {
+    width: 90%;
+    padding: 20px 0 15px 0;
+  }
 }
